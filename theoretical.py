@@ -38,3 +38,5 @@ print("全体の数" + str(len(numbers)))
 all_result = sum(errorn_list) / len(errorn_list)
 print("相対誤差の平均" + str(all_result))
 
+
+
