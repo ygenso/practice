@@ -1,6 +1,8 @@
 import random
 #繰り返した回数
 ren = 0
+#調べる回数
+resarch = 10
 #最大値
 max = 10
 #ランダムな数字を格納するリスト
@@ -17,11 +19,11 @@ result = 0
 errorn_list = []
 for n in range(10):
     #正確性を上げるため、10回の平均値をとる
-    for i in range(10):
+    for i in range(resarch):
         numbers = []
         result = 0
         #繰り返す回数
-        for index in range(1):
+        for index in range(100):
             ren += 1
             number = random.randint(1, max)
             numbers.append(number)
@@ -37,6 +39,3 @@ for n in range(10):
 print("全体の数" + str(len(numbers)))
 all_result = sum(errorn_list) / len(errorn_list)
 print("相対誤差の平均" + str(all_result))
-
-
-
